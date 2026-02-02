@@ -27,6 +27,13 @@ document.getElementById("stop").onclick = () => {
   clearInterval(interval);
   interval = null;
 };
+// ===== ВЫБОР ТИПА СЕССИИ =====
+let currentSessionType = "Учёба";
+
+const sessionTypeSelect = document.getElementById("sessionType");
+sessionTypeSelect.onchange = () => {
+  currentSessionType = sessionTypeSelect.value;
+};
 
 document.getElementById("reset").onclick = () => {
   seconds = 0;
